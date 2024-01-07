@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const baseUrl = 'http://localhost:3000/api/users';
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const getAllUsers = async () => {
 
     try {
-        const response = await axios.post(`${baseUrl}/sync`);
+        const response = await axios.post(`${apiUrl}/sync`);
         return response.data.users;
     } catch (error) {
         return error.message;
@@ -16,7 +16,7 @@ const getAllUsers = async () => {
 const createUser = async (values) => {
 
     try {
-        const response = await axios.put(`${baseUrl}/users`, values);
+        const response = await axios.put(`${apiUrl}/users`, values);
         return response.data;
     } catch (error) {
         return error.message;
