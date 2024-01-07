@@ -202,5 +202,10 @@ body {
   .users-list__container {
     width: 98%;
     padding: 3rem 0.5rem;
+    min-width: 48.5rem;
+  }
+
+  .users-list__table {
+    min-width: 47rem;
   }
 }

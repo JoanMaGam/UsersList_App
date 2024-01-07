@@ -1,11 +1,10 @@
-@host = http://localhost:3000/api/users
-
+@host = https://userslistapp-api-rest.onrender.com/api/users
 
 ### Sync users
-POST https://userslistapp-api-rest.onrender.com/api/users/sync
+POST {{host}}/sync
 
 ### Get users from DB
-GET https://userslistapp-api-rest.onrender.com/api/users/users
+GET {{host}}/users
 
 ### Create user
 PUT {{host}}/users
